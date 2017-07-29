@@ -12,7 +12,10 @@ var React = require('react');
 // only cotain render and does not maintain state
 var About = (props) => {
     return (
-        <h3>About Component</h3>
+        <div>
+            <h3>About</h3>
+            <p>Welcome to the about page!</p>
+        </div>
     );
 };
 
