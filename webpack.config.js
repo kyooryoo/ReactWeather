@@ -33,6 +33,7 @@ module.exports = {
             IncomeForm: 'app/components/IncomeForm.jsx',
             IncomeMessage: 'app/components/IncomeMessage.jsx',
             openWeatherMap: 'app/api/openWeatherMap.jsx',
+            ErrorModal: 'app/components/ErrorModal.jsx',
         },
         extensions: ['', '.js', '.jsx']
     },
