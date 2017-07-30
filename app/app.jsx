@@ -19,7 +19,6 @@ ReactDOM.render(
         <Route path="/" component={Main}>
             <Route path="about" component={About} />
             <Route path="examples" component={Examples} />
-            <Route path="income" component={Income} />
             <IndexRoute component={Weather} />
         </Route>
     </Router>,

@@ -10,14 +10,20 @@ module.exports = {
         var requestUrl = `${OWM_URL}q=${encodedLocation}${UNITS}${KEY}`;
         return axios.get(requestUrl).then(function (res) {
             if (res.data.cod && res.data.message) {
-                console.log(res.data);
                 throw new Error(res.data.message);
             } else {
-                console.log(res.data);
-                return res.data.main.temp;
+                console.log(res);
+                var weather = {
+                    name: res.data.name,
+                    temp: res.data.main.temp, 
+                    humidity: res.data.main.humidity,
+                    pressure: res.data.main.pressure,
+                    desp: res.data.weather[0].description,
+                }
+                return weather;
             }
         }, function (res) {
-            throw new Error(res.data.message);
+            throw new Error(res.response.data.message);
         });
     }
 };
